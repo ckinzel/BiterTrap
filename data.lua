@@ -56,7 +56,7 @@ local function config(name)
       ingredients = {
         { type = "item", name = "steel-plate", amount = 1 },
       },
-      results = { { type = "item", name = "px-rs-item", amount = 1 } }
+      results = { { type = "item", name = "px-trap-item", amount = 1 } }
     },
      -- This is the technology that will unlock the recipe.
     {
