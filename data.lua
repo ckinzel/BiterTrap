@@ -28,18 +28,24 @@ local function config(name)
   
     })
  data:extend({
-    {
-      type = "item",
-      name = "px-trap-item",
-      localised_name = {"item-name.biter-trap"},
-      localised_description = {"item-description.px-trap-item"},
-      icon = sprite 'trap.png',
-      icon_size = 32,
-      order = 'z',
-      place_result = "px-trap-entity",
-      stack_size = 50,
-    },
-  })
+      {
+        type = "simple-entity",  -- or "furnace", "container", or other entity types depending on what behavior you want
+        name = "px-trap-entity",
+        icon = sprite("trap.png"),
+        icon_size = 32,
+        flags = {"placeable-neutral", "player-creation"},
+        minable = {mining_time = 1, result = "px-trap-item"},
+        max_health = 100,
+        corpse = "small-remnants",
+        collision_box = {{-0.5, -0.5}, {0.5, 0.5}},
+        selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+        picture = {
+          filename = sprite("trap.png"),
+          width = 32,
+          height = 32,
+        }
+      }
+    })
     
   data:extend({
     {
