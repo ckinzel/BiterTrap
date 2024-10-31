@@ -1,6 +1,6 @@
 {
-  "name": "biter-trap",
-  "version": "1.0.0",
+  "name": "BiterTrap",
+  "version": "0.0.1",
   "title": "Biter Trap",
   "author": "ph414nx",
   "description": "A trap that can be placed on the map that catches live biters.",

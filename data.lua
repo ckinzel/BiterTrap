@@ -56,7 +56,7 @@ local function config(name)
     -- This is the item that is used to place the entity on the map.
     {
       type = 'item',
-      name = 'px:trap-item',
+      name = 'px-trap-item',
       
       -- In lua any function that is called with exactly one argument
       -- can be written without () brackets if the argument is a string or table.
@@ -73,7 +73,7 @@ local function config(name)
       -- often have the same name, but this is not required.
       -- For demonstration purposes I will use explicit
       -- names here.
-      place_result = 'px:trap-entity',
+      place_result = 'px-trap-entity',
       stack_size   =  50            ,
       },
   
@@ -90,7 +90,7 @@ local function config(name)
   data:extend({
     {
       type = "recipe",
-      name = "px:trap-recipe",
+      name = "px-trap-recipe",
       energy_required = 1,
       enabled = false,
       ingredients = {
@@ -100,7 +100,7 @@ local function config(name)
     },
      -- This is the technology that will unlock the recipe.
     {
-      name = 'px:trap-technology',
+      name = 'px-trap-technology',
       type = 'technology',
       
       -- Technology icons are quite large, so it is important
@@ -123,7 +123,7 @@ local function config(name)
         
         effects = {
           { type   = 'unlock-recipe',
-            recipe = 'px:trap-recipe'
+            recipe = 'px-trap-recipe'
             },
             
           -- The "nothing" effect is used to implement research effects
@@ -132,7 +132,7 @@ local function config(name)
           -- knows what is going to happen. The actual effect has to be implemented
           -- by the mod in control stage.
           { type = 'nothing',
-            effect_description = {'px:trap.trapping'},
+            effect_description = {'px-trap.trapping'},
             },
             
           },
